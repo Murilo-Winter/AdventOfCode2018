@@ -1,15 +1,15 @@
-package day2.part1;
+package day2.part2;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class main {
 
-	private static Collection<String> inputList = Arrays
+	private static List<String> inputList = Arrays
 			.asList("naosmkcwtdbfivxuphzweraljq", "nvssmicltdbfiyxuphzgeraljq", "nvosmkcwwdbfiyxuphzeeraljx",
 					"nvosmkcqtdbfiyxupkzgeraljw", "qvosmkcwtdbhiyxuphzgeraljh", "nvocqkcktdbfiyxuphzgeraljq",
 					"nvosmhcwtdbfiyxmphzgekaljq", "nvosmkcwtdbfuyxwpszgeraljq", "nvosmocwtcbfiyxupfzgeraljq",
@@ -95,46 +95,50 @@ public class main {
 					"nvcsxkcwtdbfiyxuphzgeraljn", "nvosmkcwtdbtiymuphzgeraltq", "nvosmfcwtdlfjyxuphzgeraljq",
 					"svosmkcitdbfiyxuphzgsraljq");
 
+	private static List<String> sampleImput = Arrays
+			.asList("abcde", "fghij", "klmno", "pqrst", "fguij", "axcye", "wvxyz");
+
 	public static void main(String[] args) {
+		int lowestDifference = 26;
+		int lowestDifferenceIdA = 0;
+		int lowestDifferenceIdB = 0;
 
-		int times2 = 0;
-		int times3 = 0;
+		for (int i = 0; i < inputList.size(); i++) {
+			for (int j = i + 1; j < inputList.size(); j++) {
+				String elementA = inputList.get(i);
+				String elementB = inputList.get(j);
 
-		for(String entry : inputList) {
+				int difference = 0;
+				for (int k = 0; k < elementA.length(); k++) {
+					Character characterA = elementA.charAt(k);
+					Character characterB = elementB.charAt(k);
 
-			Map<Character, Integer> charCount = new HashMap<>();
-			for(int i = 0; i < entry.length(); i++) {
-				Character character = entry.charAt(i);
-
-				if ( charCount.containsKey(character) ) {
-					charCount.replace(character, charCount.get(character)+1);
+					if (characterA != characterB) {
+						difference++;
+						if (difference > lowestDifference)
+							break;
+					}
 				}
-				else {
-					charCount.put(character, 1);
+				if (difference < lowestDifference) {
+					lowestDifference = difference;
+					lowestDifferenceIdA = i;
+					lowestDifferenceIdB = j;
 				}
 			}
-
-			Iterator it = charCount.entrySet().iterator();
-			boolean has2 = false;
-			boolean has3 = false;
-
-			while (it.hasNext()) {
-				Map.Entry pair = (Map.Entry) it.next();
-				if ( pair.getValue().equals(2))
-					has2 = true;
-				if ( pair.getValue().equals(3))
-					has3 = true;
-				if (has2 && has3)
-					break;
-			}
-
-			if (has2)
-				times2++;
-			if (has3)
-				times3++;
 		}
 
-		System.out.println(times2 * times3);
+		//Remote different characters
+		String elementA = inputList.get(lowestDifferenceIdA);
+		String elementB = inputList.get(lowestDifferenceIdB);
+		StringBuilder result = new StringBuilder();
+		for (int l = 0; l < elementA.length(); l++) {
+			Character characterA = elementA.charAt(l);
+			Character characterB = elementB.charAt(l);
+
+			if (characterA.equals(characterB))
+				result.append(characterA);
+		}
+		System.out.println(result);
 	}
 
 }

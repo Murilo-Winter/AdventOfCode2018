@@ -1,7 +1,9 @@
-package day1.part1;
+package day1.part2;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class main {
 
@@ -61,10 +63,25 @@ public class main {
 
 	public static void main(String[] args) {
 		Long frequency = 0L;
+		Map<Long, Integer> reachedFrequencies = new HashMap<>();
 
-		for (Long entry : inputList)
+		int i = 0;
+		while (true) {
+			Long entry = inputList.get(i);
 			frequency += entry;
-		System.out.println(frequency);
+
+			if (reachedFrequencies.containsKey(frequency)) {
+				System.out.println(frequency);
+				break;
+			}
+			else {
+				reachedFrequencies.put(frequency, 1);
+				if (i + 1 == inputList.size())
+					i = 0;
+				else
+					i++;
+			}
+		}
 	}
 
 }
