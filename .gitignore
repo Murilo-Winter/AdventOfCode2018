@@ -1,0 +1,30 @@
+*.class
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.iml
+*.log
+*.jar
+*.war
+*.ear
+*.project
+*derby.log
+*/.idea/**
+**/target/**
+*/bin/**
+*.settings/**
+*.classpath/**
+*.classpath
+*/derby.log
+rebuild.bat
+*~
+/***/derby.log# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+.idea/
+/target/
+/bin/
+
+
+# Spring Files
+*.springBeans
