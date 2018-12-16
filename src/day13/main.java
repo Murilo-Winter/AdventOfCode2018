@@ -10,7 +10,7 @@ public class main {
 		System.out.println(day13Part1.execute());
 
 		Day13Part2 day13Part2 = new Day13Part2();
-		//System.out.println(day13Part2.execute());
+		System.out.println(day13Part2.execute());
 	}
 
 }

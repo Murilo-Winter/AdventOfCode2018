@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Day13Part1 {
 
@@ -19,10 +20,40 @@ public class Day13Part1 {
 		ArrayList<String> listMap = readInput("resources/day13/input.txt");
 		map = initializeMap(listMap);
 
-		while(true) {
+		Integer tick = 0;
+		while (true) {
 			Collections.sort(cartList);
-			cartList.forEach(this::move);
-			return "";
+			//draw(map, cartList);
+			for(Cart cart : cartList) {
+				move(cart);
+				String collision = checkCollision(cartList);
+				if (collision != null)
+					return collision;
+			}
+			tick++;
+		}
+	}
+
+	private void draw(char[][] map, List<Cart> cartList) {
+
+		for (int i = 0; i < 150; i++) {
+			StringBuilder stringBuilder = new StringBuilder();
+			for (int j = 0; j < 150; j++) {
+				if (cartList.contains(new Cart(j, i, 'a'))) {
+					Character value = null;
+					for(int h = 0; h < cartList.size(); h++) {
+						if (cartList.get(h).equals(new Cart(j, i, 'a'))) {
+							value = (char) (h + 65);
+							h = cartList.size();
+						}
+					}
+					stringBuilder.append(value);
+				}
+				else
+					stringBuilder.append(map[j][i]);
+			}
+			System.out.println(stringBuilder.toString());
+
 		}
 
 	}
@@ -30,28 +61,72 @@ public class Day13Part1 {
 	private void move(Cart cart) {
 
 		Integer nextX = cart.x;
+
 		Integer nextY = cart.y;
 
-		if(map[cart.x][cart.y] == '+') {
+		if (map[cart.x][cart.y] == '+') {
 
-//			switch (cart.direction) {
-//			case '<':
-//				cart.direction = 'v';
-//				break;
-//			case '>':
-//				cart.direction = '^';
-//				break;
-//			case 'v':
-//				cart.direction = '<';
-//				break;
-//			case '^':
-//				cart.direction = '>';
-//				break;
-//			}
+			switch (cart.direction) {
+			case '<':
+				switch (cart.nextDirection) {
+				case 'L':
+					cart.direction = 'v';
+					break;
+				case 'S':
+					cart.direction = '<';
+					break;
+				case 'R':
+					cart.direction = '^';
+					break;
+				}
+				break;
+
+			case '>':
+				switch (cart.nextDirection) {
+				case 'L':
+					cart.direction = '^';
+					break;
+				case 'S':
+					cart.direction = '>';
+					break;
+				case 'R':
+					cart.direction = 'v';
+					break;
+				}
+				break;
+
+			case 'v':
+				switch (cart.nextDirection) {
+				case 'L':
+					cart.direction = '>';
+					break;
+				case 'S':
+					cart.direction = 'v';
+					break;
+				case 'R':
+					cart.direction = '<';
+					break;
+				}
+				break;
+
+			case '^':
+				switch (cart.nextDirection) {
+				case 'L':
+					cart.direction = '<';
+					break;
+				case 'S':
+					cart.direction = '^';
+					break;
+				case 'R':
+					cart.direction = '>';
+					break;
+				}
+				break;
+			}
 
 			cart.changeNextDirectionOnIntersection();
 		}
-		else if(map[cart.x][cart.y] == '/') {
+		else if (map[cart.x][cart.y] == '/') {
 
 			switch (cart.direction) {
 			case '<':
@@ -69,7 +144,7 @@ public class Day13Part1 {
 			}
 
 		}
-		if(map[cart.x][cart.y] == '\\') {
+		else if (map[cart.x][cart.y] == '\\') {
 
 			switch (cart.direction) {
 			case '<':
@@ -89,47 +164,46 @@ public class Day13Part1 {
 		}
 
 		switch (cart.direction) {
-			case '<':
-				nextX--;
-				break;
-			case '>':
-				nextX++;
-				break;
-			case 'v':
-				nextY++;
-				break;
-			case '^':
-				nextY--;
-				break;
-			}
+		case '<':
+			nextX--;
+			break;
+		case '>':
+			nextX++;
+			break;
+		case 'v':
+			nextY++;
+			break;
+		case '^':
+			nextY--;
+			break;
+		}
 		cart.x = nextX;
 		cart.y = nextY;
-
 	}
 
 	private char[][] initializeMap(ArrayList<String> listMap) {
 		char[][] map = new char[150][150];
 
-		Integer currentLine = 0;
+		Integer currentColumn = 0;
 		Integer currentRow = 0;
 
-		for(String line: listMap) {
+		for (String line : listMap) {
 			for (int i = 0; i < line.length(); i++) {
 				Character element = line.charAt(i);
-				if(Arrays.asList('<', '>', '^', 'v').contains(element)) {
-					cartList.add(new Cart(currentLine, currentRow, element));
-					if(Arrays.asList('<', '>').contains(element))
-						map[currentLine][currentRow] = '-';
+				if (Arrays.asList('<', '>', '^', 'v').contains(element)) {
+					cartList.add(new Cart(currentRow, currentColumn, element));
+					if (Arrays.asList('<', '>').contains(element))
+						map[currentRow][currentColumn] = '-';
 					else
-						map[currentLine][currentRow] = '|';
+						map[currentRow][currentColumn] = '|';
 				}
 				else {
-					map[currentLine][currentRow] = element;
+					map[currentRow][currentColumn] = element;
 				}
 				currentRow++;
 			}
 			currentRow = 0;
-			currentLine++;
+			currentColumn++;
 		}
 		return map;
 	}
@@ -144,7 +218,18 @@ public class Day13Part1 {
 		}
 	}
 
-	class Cart implements Comparable{
+	private String checkCollision(List<Cart> cartList) {
+
+		List<Cart> collisionList = cartList.stream().filter(c -> Collections.frequency(cartList, c) > 1)
+				.collect(Collectors.toList());
+
+		if (collisionList.size() > 0)
+			return collisionList.get(0).x + "," + collisionList.get(1).y;
+		else
+			return null;
+	}
+
+	class Cart implements Comparable {
 		Character nextDirection = 'L';
 
 		Integer x;
@@ -160,7 +245,7 @@ public class Day13Part1 {
 		}
 
 		public void changeNextDirectionOnIntersection() {
-			if(nextDirection.equals('L'))
+			if (nextDirection.equals('L'))
 				nextDirection = 'S';
 			else if (nextDirection.equals('S'))
 				nextDirection = 'R';
@@ -171,10 +256,25 @@ public class Day13Part1 {
 		@Override
 		public int compareTo(Object o) {
 			Cart cart = (Cart) o;
-			if(Objects.equals(this.x, cart.x))
-				return Integer.compare(this.y, cart.y);
-			else
+			if (Objects.equals(this.y, cart.y))
 				return Integer.compare(this.x, cart.x);
+			else
+				return Integer.compare(this.y, cart.y);
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o)
+				return true;
+			if (o == null || getClass() != o.getClass())
+				return false;
+			Cart cart = (Cart) o;
+			return Objects.equals(x, cart.x) && Objects.equals(y, cart.y);
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(x, y);
 		}
 	}
 
