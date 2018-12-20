@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895426ee-b66e-49bc-83fb-32ca887a5f12" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/day17/exampleInput.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/day17/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day18/Day18Part1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day18/Day18Part2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day18/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/day13/Day13Part1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/day13/Day13Part1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/day13/Day13Part2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/day13/Day13Part2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/day13/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/day13/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day13/Day13Part1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day13/Day13Part1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day13/Day13Part2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day13/Day13Part2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day13/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day13/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day17/Day17Part1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day17/Day17Part1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day17/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day17/main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,44 +21,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Day16Part2.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/day16/Day16Part2.java">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/day17/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="198" column="51" selection-start-line="198" selection-start-column="51" selection-end-line="198" selection-end-column="51" />
+            <state relative-caret-position="17">
+              <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Day17Part1.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/day17/Day17Part1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#readInput#0;class#Day16Part1#0" />
-                <element signature="method#initializeSamples#0;class#Day16Part1#0" />
-                <element signature="method#testSample#0;class#Day16Part1#0" />
-                <element signature="method#determineOpCodes#0;class#Day16Part2#0" />
-                <element signature="method#initializeInstructions#0;class#Day16Part2#0" />
-                <element signature="class#opcodeOperations#0;class#Day16Part1#0" />
-                <element signature="class#Device#0;class#Day16Part1#0" />
-                <element signature="e#8240#8241#0" expanded="true" />
-                <element signature="e#8275#8276#0" expanded="true" />
-                <element signature="class#Instruct#0;class#Day16Part1#0" />
-                <element signature="e#9596#9597#0" expanded="true" />
-                <element signature="e#9641#9642#0" expanded="true" />
+                <element signature="class#Range#0;class#Day17Part1#0" />
+                <element signature="method#Range#0;class#Range#0;class#Day17Part1#0" />
+                <element signature="class#Water#0;class#Day17Part1#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Day3Part2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day3/Day3Part2.java">
+      <file leaf-file-name="exampleInput.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/day17/exampleInput.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="313" column="28" lean-forward="true" selection-start-line="313" selection-start-column="28" selection-end-line="313" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day16/main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state relative-caret-position="153">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -73,15 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1799999999458</find>
-      <find>v</find>
-      <find>&gt;</find>
-      <find>map</find>
-      <find>150</find>
-      <find>20</find>
-      <find>line</find>
-      <find>draw</find>
-      <find>Q</find>
       <find>colli</find>
       <find>collision</find>
       <find>compare</find>
@@ -103,7 +86,19 @@
       <find>tolist</find>
       <find>Iterator</find>
       <find>switch</find>
+      <find>class po</find>
+      <find>.split</find>
+      <find>split</find>
+      <find>506</find>
+      <find>draw</find>
+      <find>~</find>
+      <find>|</find>
+      <find>input</find>
+      <find>input.t</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\muril\IdeaProjects\AdventOfCode2018</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,13 +106,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/day7/Day7Part2.java" />
-        <option value="$PROJECT_DIR$/src/day8/input.txt" />
-        <option value="$PROJECT_DIR$/resources/input.txt" />
-        <option value="$PROJECT_DIR$/src/day8/Day8Part1.java" />
-        <option value="$PROJECT_DIR$/src/day8/Day8Part2.java" />
-        <option value="$PROJECT_DIR$/src/day8/main.java" />
-        <option value="$PROJECT_DIR$/src/day10/day9/main.java" />
         <option value="$PROJECT_DIR$/src/day9/Day9Part1.java" />
         <option value="$PROJECT_DIR$/src/day9/Day9Part2.java" />
         <option value="$PROJECT_DIR$/src/day9/main.java" />
@@ -162,6 +150,13 @@
         <option value="$PROJECT_DIR$/src/day16/main.java" />
         <option value="$PROJECT_DIR$/resources/day16/instructions.txt" />
         <option value="$PROJECT_DIR$/src/day16/Day16Part2.java" />
+        <option value="$PROJECT_DIR$/src/day18/day17/Day17Part2.java" />
+        <option value="$PROJECT_DIR$/src/day18/Day17Part2.java" />
+        <option value="$PROJECT_DIR$/src/day18/Day18Part1.java" />
+        <option value="$PROJECT_DIR$/src/day17/main.java" />
+        <option value="$PROJECT_DIR$/resources/day17/input.txt" />
+        <option value="$PROJECT_DIR$/resources/day17/exampleInput.txt" />
+        <option value="$PROJECT_DIR$/src/day17/Day17Part1.java" />
       </list>
     </option>
   </component>
@@ -184,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,7 +195,7 @@
               <item name="AdventOfCode2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="AdventOfCode2018" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="day16" type="462c0819:PsiDirectoryNode" />
+              <item name="day17" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AdventOfCode2018" type="b2602c69:ProjectViewProjectNode" />
@@ -218,14 +212,15 @@
               <item name="AdventOfCode2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="AdventOfCode2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="day16" type="462c0819:PsiDirectoryNode" />
+              <item name="day17" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,9 +231,12 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\resources\day8" />
-      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\src\day18" />
+      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\resources\day16" />
+      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\src\day17" />
+      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\src\day16" />
+      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\src\day15" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="day4" />
@@ -247,12 +245,9 @@
       <recent name="day1" />
       <recent name="day4.part2" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\resources\day16" />
-      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\src\day17" />
-      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\src\day16" />
-      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\src\day15" />
-      <recent name="C:\Users\I838796\AdventOfCode2018" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\resources\day8" />
+      <recent name="C:\Users\muril\IdeaProjects\AdventOfCode2018\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -267,20 +262,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.main (2)">
+  <component name="RunManager" selected="Application.main">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day11.main" />
-      <module name="AdventOfCode2018" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day11.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
     </configuration>
     <configuration name="main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day16.main" />
@@ -326,6 +310,17 @@
         </pattern>
       </extension>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day17.main" />
+      <module name="AdventOfCode2018" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -365,19 +360,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.main (1)" />
       <item itemvalue="Application.main (4)" />
       <item itemvalue="Application.main (3)" />
       <item itemvalue="Application.main (5)" />
       <item itemvalue="Application.main (2)" />
+      <item itemvalue="Application.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.main (2)" />
         <item itemvalue="Application.main (5)" />
         <item itemvalue="Application.main (3)" />
         <item itemvalue="Application.main (4)" />
-        <item itemvalue="Application.main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -404,28 +399,28 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5067568" side_tool="true" weight="0.5036603" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5081081" side_tool="true" weight="0.54172766" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49324325" weight="0.3704246" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49324325" weight="0.29136163" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16891892" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17702703" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49324325" visible="true" weight="0.032210834" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4918919" visible="true" weight="0.019033674" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="DB Browser" order="2" weight="0.32995737" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info id="DB Browser" order="2" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -464,105 +459,69 @@
           <properties />
           <option name="timeStamp" value="197" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/day17/Day17Part1.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="474" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="428" />
+      <option name="time" value="476" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>instructList</expression-string>
+        <expression-string>map[j][i]</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>opCodeMap</expression-string>
+        <expression-string>map[waterSource.x][waterSource.y+1]</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sample.possibleOpCodesList</expression-string>
+        <expression-string>map[waterSource.x][waterSource.y+1] != '|'</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sample.possibleOpCodesList.</expression-string>
+        <expression-string>map[water.position.y+1][i]</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sampleList</expression-string>
+        <expression-string>map[water.position.y][i] == '#'</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>uniqueSample.possibleOpCodesList.get(0)</expression-string>
+        <expression-string>map[water.position.y][5]</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>a</expression-string>
+        <expression-string>map[water.position.y][6]</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sampleList.get(6).possibleOpCodesList.remove(uniqueSample.possibleOpCodesList.get(0))</expression-string>
+        <expression-string>map[water.position.y][i]</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sampleList.get(6)</expression-string>
+        <expression-string>map[water.position.y+1][water.position.x]</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/day6/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day5/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day4/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day3/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day2/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day1/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/day6/Day6Part2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -578,13 +537,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#initializeList#0;class#Day10Part1#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day10/Day10Part1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="340" column="33" lean-forward="true" selection-end-line="462" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -655,10 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="method#initializeMap#0;class#Day13Part2#0" />
-            <element signature="method#readInput#0;class#Day13Part2#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,31 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/day14/Day14Part1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day13/Day13Part1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="255" selection-start-line="255" selection-end-line="262" selection-end-column="9" />
-          <folding>
-            <element signature="method#draw#0;class#Day13Part1#0" />
-            <element signature="method#move#0;class#Day13Part1#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Objects.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="127" selection-start-line="127" selection-end-line="127" />
-          <folding>
-            <element signature="e#3960#3961#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,9 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="203" selection-start-line="203" selection-end-line="203" />
-          <folding>
-            <element signature="e#7468#7469#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,9 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="141" selection-start-line="141" selection-end-line="141" />
-          <folding>
-            <element signature="e#5644#5645#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,11 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="611" selection-start-line="611" selection-end-line="611" />
-          <folding>
-            <element signature="e#23628#23629#0" expanded="true" />
-            <element signature="e#23682#23683#0" expanded="true" />
-            <element signature="e#24394#24395#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -827,56 +743,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/day17/Day17Part1.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day17/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/day16/input">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day15/Day15Part1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initializeMap#0;class#Day15Part1#0" />
-            <element signature="method#findInRangePositions#0;class#Day15Part1#0" />
-            <element signature="method#getNonOpposingDirections#0;class#Day15Part1#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day16/Day16Part1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#readInput#0;class#Day16Part1#0" />
-            <element signature="method#initializeSamples#0;class#Day16Part1#0" />
-            <element signature="class#Device#0;class#Day16Part1#0" />
-            <element signature="e#4437#4438#0" expanded="true" />
-            <element signature="e#4472#4473#0" expanded="true" />
-            <element signature="class#Instruction#0;class#Day16Part1#0" />
-            <element signature="class#opcodeOperation#0;class#Day16Part1#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day16/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/day16/input" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/stream/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="708">
@@ -915,24 +782,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/day16/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="40" lean-forward="true" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day14/Day14Part1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day13/Day13Part1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day10/Day10Part1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/day16/Day16Part2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="198" column="51" selection-start-line="198" selection-start-column="51" selection-end-line="198" selection-end-column="51" />
+        <state relative-caret-position="199">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day18/Day18Part1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day18/main.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day18/Day18Part2.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day16/Day16Part1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day15/Day15Part1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="73" selection-start-line="73" selection-end-line="84" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#readInput#0;class#Day16Part1#0" />
-            <element signature="method#initializeSamples#0;class#Day16Part1#0" />
-            <element signature="method#testSample#0;class#Day16Part1#0" />
-            <element signature="method#determineOpCodes#0;class#Day16Part2#0" />
-            <element signature="method#initializeInstructions#0;class#Day16Part2#0" />
-            <element signature="class#opcodeOperations#0;class#Day16Part1#0" />
-            <element signature="class#Device#0;class#Day16Part1#0" />
-            <element signature="e#8240#8241#0" expanded="true" />
-            <element signature="e#8275#8276#0" expanded="true" />
-            <element signature="class#Instruct#0;class#Day16Part1#0" />
-            <element signature="e#9596#9597#0" expanded="true" />
-            <element signature="e#9641#9642#0" expanded="true" />
+            <element signature="method#initializeMap#0;class#Day15Part1#0" />
+            <element signature="method#findInRangePositions#0;class#Day15Part1#0" />
+            <element signature="method#getNonOpposingDirections#0;class#Day15Part1#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/day17/input.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/day17/exampleInput.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day17/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day17/Day17Part1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="192" lean-forward="true" selection-start-line="192" selection-end-line="192" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#Range#0;class#Day17Part1#0" />
+            <element signature="method#Range#0;class#Range#0;class#Day17Part1#0" />
+            <element signature="class#Water#0;class#Day17Part1#0" />
           </folding>
         </state>
       </provider>
