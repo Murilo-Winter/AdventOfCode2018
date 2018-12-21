@@ -4,6 +4,7 @@
 
 # Package Files #
 *.idea
+*.xml
 *.iml
 *.log
 *.jar

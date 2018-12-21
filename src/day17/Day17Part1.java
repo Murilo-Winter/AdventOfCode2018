@@ -3,20 +3,22 @@ package day17;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+
 public class Day17Part1 {
 
+	private Position waterSource = new Position(500, 2);
 	public Integer execute() throws FileNotFoundException {
 
-		char[][] map = initializeMap(readInput("resources/day17/exampleInput.txt"));;
+		char[][] map = initializeMap(readInput("resources/day17/input.txt"));;
+		map[waterSource.y][waterSource.x] = '+';
 
-		Position waterSource = new Position((map[0].length/2)-1, 0);
-
-		draw(map);
+		//Correct is 28246
+		//28248 is wrong
+		//draw(map);
 		while(map[waterSource.y+1][waterSource.x] != '|') {
 			dropWater(map, waterSource);
 		}
@@ -31,7 +33,7 @@ public class Day17Part1 {
 
 		while(true) {
 			//Clean old position
-			map[water.position.y][water.position.x] = '.';
+			//map[water.position.y][water.position.x] = '.';
 
 			//End of map reached
 			if (water.position.y+1 == minY) {
@@ -48,64 +50,79 @@ public class Day17Part1 {
 			//Reached clay or resting water
 			else if( map[water.position.y+1][water.position.x] == '#' || map[water.position.y+1][water.position.x] == '~' ) {
 
-//				//Check if there's no clay to hold the water in the current level
-//				Boolean clayToLeft = false;
-//				for(int i = water.position.x-1; i > -1; i-- ) {
-//					if(map[water.position.y][i] == '#') {
-//						clayToLeft = true;
-//						break;
-//					}
-//					else if(map[water.position.y+1][i] == '.') {
-//						clayToLeft = false;
-//						break;
-//					}
-//				}
-//				Boolean clayToRight = false;
-//				for(int i = water.position.x+1; i < map[0].length; i++ ) {
-//					if(map[water.position.y][i] == '#') {
-//						clayToRight = true;
-//						break;
-//					}
-//					else if(map[water.position.y+1][i] == '.') {
-//						clayToLeft = false;
-//						break;
-//					}
-//				}
-
-				if(true) {
-					water.shape = '~';
-
-					//Check if there's room to the left
-					if (map[water.position.y][water.position.x - 1] == '.' && water.lateralDirection != 'R') {
-						water.position.x--;
-						water.lateralDirection = 'L';
+				//Determine nearest pit
+				Integer pitToLeftDistance = 0;
+				for (int i = water.position.x - 1; i > -1; i--) {
+					if (map[water.position.y][i] == '#' || map[water.position.y][i] == '|') {
+						pitToLeftDistance = Integer.MAX_VALUE;
+						break;
 					}
-					//Check if there's room to the right
-					else if (map[water.position.y][water.position.x + 1] == '.' && water.lateralDirection != 'L') {
-						water.position.x++;
-						water.lateralDirection = 'R';
-					}
-					else {
+					else if (map[water.position.y + 1][i] == '.') {
+						pitToLeftDistance = water.position.x - i;
 						break;
 					}
 				}
-				else {
-					water.shape = '|';
+				Integer pitToRightDistance = 0;
+				for(int i = water.position.x+1; i < map[0].length; i++ ) {
+					if(map[water.position.y][i] == '#' || map[water.position.y][i] == '|') {
+						pitToRightDistance = Integer.MAX_VALUE;
+						break;
+					}
+					else if(map[water.position.y + 1][i] == '.') {
+						pitToRightDistance = i - water.position.x;
+						break;
+					}
+				}
 
+				//Move horizontally based on nearest pit
+				if(pitToLeftDistance < pitToRightDistance) {
 					//Check if there's room to the left (and ground below)
-					if (map[water.position.y][water.position.x - 1] == '.' && map[water.position.y+1][water.position.x] != '.' && water.lateralDirection != 'R') {
+					if (map[water.position.y][water.position.x - 1] == '.' && water.lateralDirection != 'R' && map[water.position.y + 1][water.position.x] != '.') {
 						water.position.x--;
 						water.lateralDirection = 'L';
 					}
 					//Check if there's room to the right (and ground below)
-					else if (map[water.position.y][water.position.x + 1 ] == '.' && map[water.position.y+1][water.position.x] != '.' && water.lateralDirection != 'L') {
+					else if (map[water.position.y][water.position.x + 1] == '.' && water.lateralDirection != 'L' && map[water.position.y + 1][water.position.x] != '.') {
 						water.position.x++;
 						water.lateralDirection = 'R';
 					}
 					else {
+						//Check if there's moving water in the next position (then this is moving water as well), or check if there's nothing blocking that dropping water to be considered moving water as well
+						if ((water.lateralDirection == 'L' && map[water.position.y][water.position.x - 1] == '|')
+								|| (water.lateralDirection == 'R' && map[water.position.y][water.position.x + 1] == '|')
+								|| (map[water.position.y][water.position.x - 1] == '.' && map[water.position.y][water.position.x + 1] == '.')
+								|| determineSameLevelMovingWater(map, water) == true)
+							water.shape = '|';
+						else
+							water.shape = '~';
 						break;
 					}
 				}
+				else {
+					//Check if there's room to the right (and ground below)
+					if (map[water.position.y][water.position.x + 1] == '.' && water.lateralDirection != 'L' && map[water.position.y + 1][water.position.x] != '.') {
+						water.position.x++;
+						water.lateralDirection = 'R';
+					}
+					//Check if there's room to the left (and ground below)
+					else if (map[water.position.y][water.position.x - 1] == '.' && water.lateralDirection != 'R' && map[water.position.y + 1][water.position.x] != '.') {
+						water.position.x--;
+						water.lateralDirection = 'L';
+					}
+					else {
+						//Check if there's moving water in the next position (then this is moving water as well), or check if there's nothing blocking that dropping water to be considered moving water as well
+						if ((water.lateralDirection == 'L' && map[water.position.y][water.position.x - 1] == '|')
+								|| (water.lateralDirection == 'R' && map[water.position.y][water.position.x + 1] == '|')
+								|| (map[water.position.y][water.position.x - 1] == '.' && map[water.position.y][water.position.x + 1] == '.')
+								|| determineSameLevelMovingWater(map, water) == true)
+							water.shape = '|';
+						else
+							water.shape = '~';
+						break;
+					}
+				}
+
+
 			}
 			//Found water in movement
 			else if (map[water.position.y+1][water.position.x] == '|') {
@@ -113,9 +130,38 @@ public class Day17Part1 {
 			}
 
 			//Update position
-			map[water.position.y][water.position.x] = water.shape;
+			//map[water.position.y][water.position.x] = water.shape;
 		}
 		map[water.position.y][water.position.x] = water.shape;
+	}
+
+	//Check if there's moving water on the same X level before the next wall or pit
+	private Boolean determineSameLevelMovingWater(char[][] map, Water water) {
+
+		Boolean movingWater = false;
+		for(int i = water.position.x-1; i > -1; i-- ) {
+			if(map[water.position.y][i] == '|') {
+				movingWater = true;
+				break;
+			}
+			else if(map[water.position.y][i] == '#' || map[water.position.y+1][i] == '.') {
+				movingWater = false;
+				break;
+			}
+		}
+		if (movingWater) return movingWater;
+
+		for(int i = water.position.x+1; i < map[0].length; i++ ) {
+			if(map[water.position.y][i] == '|') {
+				movingWater = true;
+				break;
+			}
+			else if(map[water.position.y][i] == '#' || map[water.position.y+1][i] == '.') {
+				movingWater = false;
+				break;
+			}
+		}
+		return movingWater;
 	}
 
 	private ArrayList<String> readInput(String path) throws FileNotFoundException {
@@ -159,19 +205,20 @@ public class Day17Part1 {
 			for(int j = 0; j < map[0].length; j++)
 				map[i][j] = '.';
 
-		//Normalize ranges based on X min and Max (and add 1 offset for first Y line)
+		//Normalize ranges based on X min and Max (and add 1 offset for first line)
 		Integer factor = minX-1;
 		rangeList.forEach(r -> { r.begin.x-=factor; r.end.x-=factor;});
+		waterSource.x-= factor;
 
 		//Input range into map
 		for( Range range : rangeList) {
 
-			//Draw in the X axis
+			//Draw in the Y axis
 			if (range.begin.x.equals(range.end.x)) {
 				for(int i = range.begin.y; i <= range.end.y; i++)
 					map[i][range.begin.x] = '#';
 			}
-			//Draw in the Y axis
+			//Draw in the X axis
 			else {
 				for(int i = range.begin.x; i <= range.end.x; i++)
 					map[range.begin.y][i] = '#';
@@ -191,7 +238,7 @@ public class Day17Part1 {
 		System.out.println('\n');
 	}
 
-	private Integer countWater(char[][] map) { //Fix
+	private Integer countWater(char[][] map) {
 		Integer waterCount = 0;
 		for(int i = 0; i < map.length; i++) {
 			for(int j = 0; j < map[0].length; j++) {
